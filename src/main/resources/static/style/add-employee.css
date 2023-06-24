@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    color-scheme: dark white;
+}
+
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    background-image: linear-gradient(45deg, #333, #222);;
+    color: #fff;
+    padding: 20px 10px;
+}
+
+main {
+    width: 90%;
+    margin: 1rem auto;
+}
+
+main .home-link {
+    text-align: right;
+}
+
+main .home-link a {
+    color: rgb(5, 138, 190);
+    font-size: 1.02rem;
+}
+
+main .details-section {
+    min-height: calc(100vh - 150px);
+    display: grid;
+    place-items: center;
+}
+
+.details-section .details-container {
+    box-shadow: 0 0 5px rgb(5, 138, 190);
+    width: 35%;
+    border-radius: 10px;
+    padding: 1rem;
+
+}
+
+.details-container .details-heading {
+    margin-bottom: 1rem;
+    padding: 1rem 0;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.details-container .form-group {
+    margin: 1rem 0;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: .2rem;
+}
+
+
+.details-container .form-control {
+    width: 100%;
+    padding: .3rem;
+    font-size: 1.01rem;
+    resize: none;
+}
+
+.details-container input[type="submit"] {
+    background-color: rgb(2, 66, 92);
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 100px;
+    box-shadow: 0 0 5px rgb(26, 173, 231, .3);
+    transition: .5s;
+}
+
+.details-container input[type="submit"]:hover {
+    background-color: rgb(3, 85, 118);
+}

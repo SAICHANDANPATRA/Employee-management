@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management</title>
+    <link rel="stylesheet" href="/style/view-employee.css">
+    <script src="/script/view-employee.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1> Employee Management</h1>
+    </header>
+
+    <main>
+        <section class="view-employee">
+            <div class="button-container">
+                <a href="/addemployee" class="add-btn">Add Employee</a>
+            </div>
+           <a href="/logout">Logout</a>
+
+            <div class="card-container">
+                <div class="card" th:each="employee : ${employees}">
+                    <div class="card-header">
+                        <img th:src="${employee.pictureURL}" th:alt="|${employee.name} -image|">
+                    </div>
+                    <div class="card-body">
+                        <h2 th:text="${employee.name}"></h2>
+                        <h4 th:text="${employee.designation}"></h4>
+                        <p th:text="${employee.description}"></p>
+                    </div>
+                    <div class="card-footer">
+                        <a th:href="'/update-employee?id=' + ${employee.id}">Update</a>
+                        <a href="#" th:attr="onclick=|onDelete('${employee.id}')|">Delete</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

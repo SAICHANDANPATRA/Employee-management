@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    background-color: rgb(5, 138, 190);
+    color: #fff;
+    padding: 20px 10px;
+}
+
+main {
+    width: 90%;
+    margin: 30px auto;
+}
+
+main section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+main section .add-btn {
+    background-color: rgb(3, 174, 242);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(5, 138, 190);
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.card-container .card {
+    box-shadow: 0 0 10px rgb(5, 138, 190);
+    border-radius: 10px;
+}
+.card-container .card .card-header {
+    overflow: hidden;
+}
+
+.card-container .card .card-header img{
+    width: 100%;
+    height: 250px;
+    transition: 1s;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-container .card .card-header img:hover {
+    scale: 1.1;
+}
+
+.card-container .card .card-body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.card-container .card .card-body p {
+    text-align: center;
+    height: 115px;
+    overflow-y: auto;
+}
+
+.card-container .card .card-body p::-webkit-scrollbar {
+    width: 2px;
+}
+
+.card-container .card .card-body p::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.card-container .card .card-body p::-webkit-scrollbar-thumb {
+    background: #ccc;
+}
+
+.card-container .card .card-footer {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+ 
+.card-container .card .card-footer a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    padding: 5px 40px;
+    border-radius: 100px;
+}
+
+.card-container .card .card-footer a:first-child {
+    border: 1px solid rgb(3, 174, 242);
+    color: #000;
+}
+
+.card-container .card .card-footer a:last-child {
+   border: 1px solid rgb(244, 7, 189);
+    color: #000;
+}
